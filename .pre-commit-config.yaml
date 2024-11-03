@@ -1,0 +1,19 @@
+# 这是根级配置项
+exclude: |
+  (?x)^(
+      patches/.+|
+      third_party/.+
+  )$
+
+repos:
+  # 配置仓库及钩子
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-merge-conflict
+
+  - repo: https://github.com/psf/black
+    rev: 24.8.0
+    hooks:
+      - id: black
