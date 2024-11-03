@@ -37,6 +37,7 @@ repos:
           (?x)^(
               test/dygraph_to_static/test_error.py
           )$
+
   - repo: local
     hooks:
       - id: copyright_checker
